@@ -20,8 +20,11 @@ namespace Variables
         }
     }
 
+    
+
     public class Human
     {
+        // 멤버변수 : 클래스 / 구조체 등을 구성하는 멤버로서 선언된 변수
         int ago;
         float height; // 4 byte 실수형// 8 byte 실수형
         double weight; // 8 byte 실수형
@@ -29,6 +32,6 @@ namespace Variables
         // true : 0이 아님, false : 0
         char genderCharacter;// 2 byte 문자형 (ASCII 코드로 표현)
         // 'a' == 97 == 64 + 32 + 1 == 2^6 + 2^5 + 2^0
-        string namer; // 문자열형, 문자갯수, * 2 byte +1byte (null)
+        string name; // 문자열형, 문자갯수 * 2 byte + 1byte (null)
     }
 }
