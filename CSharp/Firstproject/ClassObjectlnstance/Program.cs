@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Xml.Linq;
 
 namespace ClassObjectlnstance
@@ -10,7 +11,7 @@ namespace ClassObjectlnstance
             // new 키워드
             // 동적할당 키워드
             // 객체화 : 클래스타입의 멤버들만큼의 공간을 할당하는 과정
-            // 객체 : 클래스타입의 멤버들만큼 할당괸 메모리 공간
+            // 객체 : 클래스타입의 멤버들만큼 할당된 메모리 공간
             // 인스턴스화 : 객체에 실제 데이터를 대입하는 과정
             // 인스턴스 : 객체는 객체인데, 각 멤버들의 데이터가 초기화되어있는 상태의 객체
 
@@ -31,12 +32,26 @@ namespace ClassObjectlnstance
             // 지역변수처럼 반드시 초기화를 할 필요가 없다.
             // char tempCher;
             // Console.WriteLine($"성별 : {tempCher}");
+
+            Console.WriteLine(Human.Instance.name);
+
+            Human human2 = new Human();
+            human2.height = 160.0f;
+            human2.name = "만수";
+            human2.Breath();
+
+
+            Console.WriteLine(Human.Instance.name);
         }
     }
 
     // 클래스도 사용자정의 '자료형'
     public class Human
     {
+        // static 키워드
+        // 객체화가 불가능한 키워드 -> Human 클래스타입의 객체를 만들었을때 해당 객체에는 Instance 라는 멤버변수가 없다.
+        public static Human Instance;
+
         // 보호수준을 결정하는 접근 제한자
         // public : 접근 제한 없음
         // private : 해당 객체 외 접근 제한
@@ -68,9 +83,13 @@ namespace ClassObjectlnstance
         // ex) class, array, string ..
         public Human()
         {
-            height = 160.0f;
-            weight = 300.0f;
-            isReseting = false;
+            // this 키워드
+            // 객체 자기자신 참조 반환키워드
+            Instance = this;
+
+            this.height = 160.0f;
+            this.weight = 300.0f;
+            this.isReseting = false;
         }
 
         // 소멸자
@@ -83,7 +102,7 @@ namespace ClassObjectlnstance
 
         public void Breath()
         {
-            Console.WriteLine($"{name} (이)가 숨을 쉰다");
+            Console.WriteLine($"{this.name} (이)가 숨을 쉰다");
 
         }
     }
