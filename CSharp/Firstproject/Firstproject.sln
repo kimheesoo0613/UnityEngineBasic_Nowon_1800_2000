@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Statment_SwitchCase_And_Enu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Operators", "Operators\Operators.csproj", "{095F820A-D3F6-48C1-8567-5ED2D9D3CA77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array\Array.csproj", "{64147483-7279-4B68-9D1C-59D194BD2DA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array", "Array\Array.csproj", "{64147483-7279-4B68-9D1C-59D194BD2DA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Statement_Loops", "Statement_Loops\Statement_Loops.csproj", "{21D3F52A-BA97-4BE5-9AD9-B030F9B2ABEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Statement_Loops", "Statement_Loops\Statement_Loops.csproj", "{21D3F52A-BA97-4BE5-9AD9-B030F9B2ABEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example02_Array2D", "Example02_Array2D\Example02_Array2D.csproj", "{BF1D00C7-E9D8-4C22-8B4B-5042BE0C0697}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{21D3F52A-BA97-4BE5-9AD9-B030F9B2ABEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D3F52A-BA97-4BE5-9AD9-B030F9B2ABEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21D3F52A-BA97-4BE5-9AD9-B030F9B2ABEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1D00C7-E9D8-4C22-8B4B-5042BE0C0697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1D00C7-E9D8-4C22-8B4B-5042BE0C0697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1D00C7-E9D8-4C22-8B4B-5042BE0C0697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1D00C7-E9D8-4C22-8B4B-5042BE0C0697}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
