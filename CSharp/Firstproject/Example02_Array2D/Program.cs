@@ -25,16 +25,16 @@ namespace Example02_Array2D
 
                 switch (input)
                 {
-                    case "MoveLeft":
+                    case "L":
                         player.MoveLeft(map);
                         break;
-                    case "MoveRight":
+                    case "R":
                         player.MoveRight(map);
                         break;
-                    case "MoveDown":
+                    case "D":
                         player.MoveDown(map);
                         break;
-                    case "MoveUp":
+                    case "U":
                         player.MoveUp(map);
                         break;
                     default:
@@ -89,9 +89,9 @@ namespace Example02_Array2D
             }
             public void MoveRight(int[,] map)
             {
-                if (_x + 1 < 4)
+                if (_x + 1 > map.GetLength(1) - 1)
                     Console.WriteLine($"플레이어를 오른쪽으로 이동시킬 수 없습니다.(경계초과) 현재위치 : {_x}, {_y}");
-                else if (map[_y, _x + 1] != 4)
+                else if (map[_y, _x + 1] != 0)
                     Console.WriteLine($"플레이어를 오른쪽으로 이동시킬 수 없습니다.(길이없음) 현재위치 : {_x}, {_y}");
                 else
                 {
@@ -103,7 +103,7 @@ namespace Example02_Array2D
             }
             public void MoveDown(int[,] map)
             {
-                if (_y + 1 < 0)
+                if (_y + 1 > map.GetLength(0))
                     Console.WriteLine($"플레이어를 아래로 이동시킬 수 없습니다.(경계초과) 현재위치 : {_x}, {_y}");
                 else if (map[_y + 1, _x] != 0)
                     Console.WriteLine($"플레이어를 아래로 이동시킬 수 없습니다.(길이없음) 현재위치 : {_x}, {_y}");
@@ -116,7 +116,7 @@ namespace Example02_Array2D
             }
             public void MoveUp(int[,] map)
             {
-                if (_y - 1 < 0)
+                if (_y - 1 > map.GetLength(1))
                     Console.WriteLine($"플레이어를 위쪽으로 이동시킬 수 없습니다.(경계초과) 현재위치 : {_x}, {_y}");
                 else if (map[_y - 1, _x] != 0)
                     Console.WriteLine($"플레이어를 위쪽으로 이동시킬 수 없습니다.(길이없음) 현재위치 : {_x}, {_y}");
