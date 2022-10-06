@@ -66,14 +66,19 @@ namespace MyDynamicArrray
             return true;
         }
 
-        public bool Remove(T item)
+        public int FindIndex(T item)
         {
             for (int i = 0; i < Count; i++)
             {
                 if (Comparer<T>.Default.Compare(_data[i], item) == 0)
-                    return RemoveAt(i);
+                    return -1;
             }
-            return false;
+            return -1;
+        }
+
+        public bool Remove(T item)
+        {
+            return RemoveAt(FindIndex(item)); 
         }
 
         public IEnumerator<T> GetEnumerator()
