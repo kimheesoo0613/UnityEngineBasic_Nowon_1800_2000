@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace MyLinkedList
 {
@@ -28,6 +29,7 @@ namespace MyLinkedList
         public MyLinkedListNode<T> First => _first;
         public MyLinkedListNode<T> Last => _last;
 
+        // O(1)
         public void AddFirst(T value)
         {
             _tmp1 = new MyLinkedListNode<T>(value);
@@ -45,6 +47,7 @@ namespace MyLinkedList
             _first = _tmp1;
         }
 
+        // O(1)
         public void AddLast(T value)
         {
             _tmp1 = new MyLinkedListNode<T>(value);
@@ -93,6 +96,7 @@ namespace MyLinkedList
             return _tmp1;
         }
 
+        // O(N)
         public MyLinkedListNode<T> Find(T value)
         {
             _tmp1 = _first;
@@ -106,6 +110,7 @@ namespace MyLinkedList
             return null;
         }
 
+        // O(N)
         public MyLinkedListNode<T> FindLast(T value)
         {
             _tmp1 = _last;
@@ -119,6 +124,7 @@ namespace MyLinkedList
             return null;
         }
 
+        // O(N)
         public bool Remove(T value)
         {
             _tmp1 = Find(value);
@@ -130,6 +136,21 @@ namespace MyLinkedList
                     _tmp1.Next.Prev = _tmp1.Prev;
 
                 _tmp1 = _tmp1.Next = _tmp1.Prev = null;
+                return true;
+            }
+            return false;
+        }
+        // O(N)
+        public bool Remove(MyLinkedListNode<T> node)
+        {
+            if (node != null)
+            {
+                if (node.Prev != null)
+                    node.Prev.Next = node.Next;
+                if (node.Next != null)
+                    node.Next.Prev = node.Prev;
+
+                node = node.Next = node.Prev = null;
                 return true;
             }
             return false;
