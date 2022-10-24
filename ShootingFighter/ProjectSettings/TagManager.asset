@@ -17,7 +17,7 @@ TagManager:
   - 
   - Player
   - 
-  - PlayerProjectTile
+  - PlayerProjectile
   - 
   - 
   - Enemy
@@ -35,7 +35,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - MapBound
   - 
   m_SortingLayers:
   - name: Default

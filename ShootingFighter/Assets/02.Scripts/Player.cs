@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Player : MonoBehaviour
 {
     private float _hp;
-
-    public float HP
+    public float Hp
     {
         get
         {
@@ -30,12 +28,11 @@ public class Player : MonoBehaviour
 
     public void Hurt(float damage)
     {
-        HP -= damage;
+        Hp -= damage;
     }
 
     private void Awake()
     {
-        HP = _hpMax;
+        Hp = _hpMax;
     }
-
 }
